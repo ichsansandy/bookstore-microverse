@@ -39,10 +39,18 @@ function BookListContainer() {
   };
 
   return (
-    <>
+    <div className="book-container">
       {Object.keys(bookList).map((book) => (
         <div className="book-card" key={book}>
-          {bookList[book][0].title}
+          <div className="book-category">
+            {bookList[book][0].category}
+          </div>
+          <div className="book-title">
+            {bookList[book][0].title}
+          </div>
+          <div className="book-author">
+            {bookList[book][0].author}
+          </div>
           <button
             type="button"
             onClick={(e) => {
@@ -54,7 +62,8 @@ function BookListContainer() {
           </button>
         </div>
       ))}
-    </>
+      <hr />
+    </div>
   );
 }
 

@@ -4,10 +4,10 @@ import AddNewBookForm from '../components/AddNewBookForm';
 
 function BookPage() {
   return (
-    <>
+    <main className="page">
       <BookListContainer />
       <AddNewBookForm />
-    </>
+    </main>
   );
 }
 
