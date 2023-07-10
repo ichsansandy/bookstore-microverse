@@ -79,10 +79,12 @@
 .book-category {
   font-weight: 600;
 }
+
 .book-title {
   font-size: larger;
   font-weight: 700;
 }
+
 .book-author {
   color: var(--primary-color);
   font-weight: 700;
