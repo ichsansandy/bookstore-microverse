@@ -1,9 +1,16 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import BookCard from './BookCard';
+import { fetchBook } from '../redux/books/booksSlice';
 
 function BookListContainer() {
+  const dispatch = useDispatch();
   const bookList = useSelector((state) => state.books.value);
+
+  useEffect(() => {
+    console.log('fetching book');
+    dispatch(fetchBook());
+  }, [dispatch]);
 
   return (
     <div className="book-container" key="book-container">
