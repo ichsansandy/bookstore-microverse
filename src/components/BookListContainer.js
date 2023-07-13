@@ -17,7 +17,7 @@ function BookListContainer() {
       {bookList.map((book) => (
         <BookCard book={book} key={book.item_id} />
       ))}
-      <hr />
+      <hr className="divider-book-form" />
     </div>
   );
 }
