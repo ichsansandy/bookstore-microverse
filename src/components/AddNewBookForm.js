@@ -54,7 +54,7 @@ function AddNewBookForm() {
             onClick={(e) => {
               e.preventDefault();
               if (newBook.author && newBook.title && newBook.category) {
-                dispatch(addBook({ itemd_id: uuid(), ...newBook }));
+                dispatch(addBook({ item_id: uuid(), ...newBook }));
                 setNewBook(initialState);
               }
             }}
