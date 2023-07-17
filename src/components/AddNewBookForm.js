@@ -53,7 +53,7 @@ function AddNewBookForm() {
             type="submit"
             onClick={(e) => {
               e.preventDefault();
-              if (newBook.author !== '' && newBook.title !== '' && newBook.category !== '') {
+              if (newBook.author && newBook.title && newBook.category) {
                 dispatch(addBook({ itemd_id: uuid(), ...newBook }));
                 setNewBook(initialState);
               }
