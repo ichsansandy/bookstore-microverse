@@ -5,7 +5,7 @@ import AddNewBookForm from '../components/AddNewBookForm';
 function BookPage() {
   return (
     <main className="page">
-      <BookListContainer />
+      <BookListContainer key="book" />
       <AddNewBookForm />
     </main>
   );
