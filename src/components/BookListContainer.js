@@ -8,7 +8,6 @@ function BookListContainer() {
   const bookList = useSelector((state) => state.books.value);
 
   useEffect(() => {
-    console.log('fetching book');
     dispatch(fetchBook());
   }, [dispatch]);
 

@@ -7,9 +7,7 @@ const URL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstor
 export const fetchBook = createAsyncThunk('books/fetchBooks', () => axios.get(URL).then((res) => res.data));
 
 export const addNewBookCallAPI = createAsyncThunk('books/addNewBook', async (newBook) => {
-  console.log(newBook);
   const response = await axios.post(URL, newBook);
-  console.log(response);
   return { newBook, response };
 });
 

@@ -54,7 +54,7 @@ function AddNewBookForm() {
             type="submit"
             onClick={(e) => {
               e.preventDefault();
-               if (newBook.author && newBook.title && newBook.category) {
+              if (newBook.author && newBook.title && newBook.category) {
                 dispatch(addNewBookCallAPI({ item_id: uuid(), ...newBook }));
                 if (responseStatus === 'completed') setNewBook(initialState);
               }
